@@ -20,3 +20,12 @@
 
 -- Cannot use aggregate functions (SUM(), COUNT(), etc.).
 
+
+
+-- Example
+
+
+SELECT country , SUM(score) , 
+AVG(score) 
+AS AVG FROM customers 
+WHERE score > 0 GROUP BY country HAVING AVG > 430 ORDER BY SUM(score) DESC  ;
