@@ -29,3 +29,24 @@ SELECT country , SUM(score) ,
 AVG(score) 
 AS AVG FROM customers 
 WHERE score > 0 GROUP BY country HAVING AVG > 430 ORDER BY SUM(score) DESC  ;
+
+
+
+
+
+
+-- Distinct
+
+SELECT DISTINCT country FROM customers;
+
+
+-- TOP
+
+
+SELECT TOP 3 * FROM customers;
+
+
+
+-- Retrieve the two customers with lowest scores
+
+SELECT * FROM customers ORDER BY score ASC LIMIT 2;
